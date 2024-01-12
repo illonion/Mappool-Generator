@@ -1,0 +1,59 @@
+:root {
+    --breadcrumbGreen: #3CB043;
+    --breadcrumbCircleDimension: 50px;
+}
+
+body {
+    font-family: "Roboto";
+}
+
+/* BREADCRUMB TRAIL */ 
+#breadcrumbTrail {
+    position: absolute; top: 50px; left: 50%; transform: translateX(-50%);
+    width: 40%;
+}
+/* Breadcrumb Lines */
+#breadcrumbLineContainer {
+    position: absolute; top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%; height: 10px;
+}
+#breadcrumbLineForeground {
+    position: absolute;
+    height: inherit; width: calc(50% + var(--breadcrumbCircleDimension) / 2);
+    background-color: var(--breadcrumbGreen);
+    transition: 1000ms ease-in-out;
+}
+#breadcrumbLineBackground {
+    width: inherit; height: inherit;
+    background-color: darkgray;
+}
+/* Breadcrumb Circles */
+#breadcrumbCircles {
+    position: absolute; top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.breadcrumbCircle {
+    width: var(--breadcrumbCircleDimension); height: var(--breadcrumbCircleDimension);
+    border-radius: var(--breadcrumbCircleDimension);
+    background-color: darkgray;
+    line-height: var(--breadcrumbCircleDimension);
+    display: flex; justify-content: center;
+    font-size: 24px;
+    transition: 1000ms ease-in-out;
+}
+.breadcrumbCircleGreen {
+    background-color: var(--breadcrumbGreen);
+}
+.breadcrumbCircleGray {
+    background-color: darkgray;
+    color: darkgray;
+}
+
+footer {
+    position: fixed; bottom: 0; left: 0;
+    width: 100vw; height: 100px;
+}
