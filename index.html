@@ -9,7 +9,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -28,12 +28,9 @@
         </div>
         <div id="title">Select Mods</div>
         <section id="modSelection">
-            <div id="modDetailsContainer">
-                <div id="modDetailsIndividualContainer">
-                    <input type="number">
-                    <input type="number">
-                    <input type="number">
-                </div>
+            <div id="modDetailsContainer"></div>
+            <div id="modSelectionButtons">
+                <button class="selectModsPageButtonBold" id="addNewModButton" onclick="addNewMod()">Add New Mod</button>
             </div>
         </section>
     </div>
@@ -42,5 +39,7 @@
         <p>Created by <a href="https://osu.ppy.sh/users/8306102">Fairy Bread</a></p>
         <a href="https://twitter.com/illonion"><img src="static/x_logo_white.png" alt="X (formerly Twitter) logo" id="x_twitter_logo_footer"></a>
     </footer>
+
+    <script src="index.js"></script>
 </body>
 </html>

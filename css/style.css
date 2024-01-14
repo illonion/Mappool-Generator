@@ -2,10 +2,12 @@
     --breadcrumbGreen: #3CB043;
     --breadcrumbCircleDimension: 50px;
     --footerMargins: 50px;
+    --removeModButton: #DD3333;
 }
 
 body {
     font-family: "Roboto";
+    font-weight: 500;
 }
 
 /* BREADCRUMB TRAIL */ 
@@ -70,10 +72,67 @@ body {
 #modSelection {
     position: absolute; top: 200px; left: 50%; transform: translateX(-50%);
     width: 100vw; height: calc(100vh - 275px);
-    display: flex; flex-direction: column;
+    display: flex; flex-direction: column; align-items: center;
 }
 #modDetailsContainer {
     display: flex; flex-direction: column; align-items: center;
+    width: 40vw;
+    margin-bottom: 20px;
+}
+.modDetailsIndividualContainer {
+    width: 100%;
+    display: flex; justify-content: space-between; flex-wrap: wrap;
+    align-items: center;
+}
+.modDetailsIndividualInput {
+    border: none;
+    border-bottom: 1px solid darkgray;
+    text-align: center;
+    width: 10vw;
+    min-width: 150px;
+    font-size: 20px;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    margin: 5px 5px 10px 5px;
+}
+.modDetailsIndividualInput:focus {
+    outline: none;
+    border-color: darkslategray;
+}
+.selectModsPageButtonBold {
+    width: 10vw;
+    min-width: 150px;
+    height: 32px;
+    border-radius: 15px;
+    border: none;
+    color: white;
+    border: 3px solid;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-indent: 0.25px;
+}
+.removeRowButton {
+    background-color: var(--removeModButton);
+    border-color: var(--removeModButton);
+}
+.removeRowButton:active {
+    background-color: white;
+    color: var(--removeModButton);
+}
+@media (max-width: 1070px) {
+    .modDetailsIndividualContainer {
+        justify-content: center;
+    }
+}
+
+/* Mod Selection Buttons */
+#addNewModButton {
+    background-color: darkslategray;
+    border-color: darkslategray;
+}
+#addNewModButton:active {
+    background-color: white;
+    color: darkslategray
 }
 
 /* FOOTER */
