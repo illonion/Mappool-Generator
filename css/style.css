@@ -24,7 +24,7 @@ body {
 }
 #breadcrumbLineForeground {
     position: absolute;
-    height: inherit; width: calc(50% + var(--breadcrumbCircleDimension) / 2);
+    width: 0; /*width: calc(50% + var(--breadcrumbCircleDimension) / 2);*/ height: inherit; 
     background-color: var(--breadcrumbGreen);
     transition: 1000ms ease-in-out;
 }
